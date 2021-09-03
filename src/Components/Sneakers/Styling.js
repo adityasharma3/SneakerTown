@@ -55,12 +55,6 @@ export const Modal = styled.div`
     flex-direction: column;
 `;
 
-export const ModalHeader = styled.div`
-    display: block;
-    background-color: black;
-    margin: 10rem 0;
-`;
-
 export const ModalBody = styled.div`
     display: flex;
     flex-direction: column;
@@ -72,11 +66,6 @@ export const ModalBody = styled.div`
     padding: 1.5vw 10vw;
     width: 60vw;
     border-radius: 2rem;
-
-    button {
-        justify-content: center;
-        width: min-content;
-    }
 `;
 
 export const ButtonSection = styled.div`
@@ -91,7 +80,6 @@ export const ModalSpecifics = styled.div `
     flex-direction: row;
     justify-content: space-evenly;
     width: 60vw;
-    /* align-items: center; */
 `;
 
 export const Sizes = styled.div `
@@ -121,4 +109,19 @@ export const Size = styled.button `
         opacity: 0.7;
         transition: 0.2s ease-in;
     }
+`;
+
+export const ProductPrice = styled.h1 `
+    background-color: whitesmoke;
+    padding: 1rem 0.5rem;
+    color: #121E42;
+    border-radius: 1rem;
+`;
+
+export const ButtonSection2 = styled.div `
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60vw;
 `;

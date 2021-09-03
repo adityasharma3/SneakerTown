@@ -5,6 +5,11 @@ import { SingularProduct, Button, ButtonSection } from './Styling'
 const Sneaker = (props) => {
 
     const [show, setShow] = useState(false);
+    const [cartItems, setCartItems] = useState([]);
+
+    const buttonClickHandler = () => {
+        props.cart(props.shoeData);
+    }
 
     return (
         <Fragment>
@@ -22,7 +27,11 @@ const Sneaker = (props) => {
                         show={show}
                         data={props.shoeData}
                     />
-                    <Button>Add to cart</Button>
+                    
+                    <Button onClick={buttonClickHandler}>
+                        Add to cart
+                    </Button>
+
                 </ButtonSection>
 
             </SingularProduct>

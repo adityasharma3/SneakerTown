@@ -5,6 +5,7 @@ import { SneakerDisplay } from './Styling';
 
 const Sneakers = (props) => {
     const [sneakers, setSneakers] = useState([]);
+    const [cartItem, setCartItem] = useState([]);
 
     const datapoint = 'https://raw.githubusercontent.com/Stupidism/goat-sneakers/master/api.json';
 
@@ -18,6 +19,10 @@ const Sneakers = (props) => {
 
     }, []);
 
+    const cartItemHandler = (data) => {
+        props.cartSectionData(data);
+    };
+
     return (
         <Fragment>
             <SneakerDisplay>
@@ -25,6 +30,7 @@ const Sneakers = (props) => {
                     <Sneaker
                         key={item.id}
                         shoeData={item}
+                        cart={cartItemHandler}
                     />
                 )}
             </SneakerDisplay>

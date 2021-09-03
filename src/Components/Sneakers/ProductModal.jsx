@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { Modal, ModalBody, Button, ModalSpecifics, Sizes, Size } from './Styling'
+import { Modal, ModalBody, Button, ModalSpecifics, Sizes, Size, ProductPrice, ButtonSection2 } from './Styling'
 
 const ProductModal = (props) => {
 
@@ -21,7 +21,7 @@ const ProductModal = (props) => {
 
     useEffect(() => {
         document.getElementById('')
-    },[]);
+    }, []);
 
     if (!props.show) {
         return null;
@@ -31,7 +31,14 @@ const ProductModal = (props) => {
         <Modal>
             <ModalBody>
                 <h1>{props.data.name}</h1>
-                <img src={props.data.main_picture_url} alt={props.data.name} />
+                <img
+                    src={props.data.main_picture_url}
+                    alt={props.data.name}
+                />
+
+                <ProductPrice>
+                    ₹{props.data.retail_price_cents / 100 * 72}
+                </ProductPrice>
 
                 <ModalSpecifics>
                     <h2>{props.data.brand_name}</h2>
@@ -46,7 +53,10 @@ const ProductModal = (props) => {
                     )}
                 </Sizes>
 
-                <Button onClick={props.onClose}>Close</Button>
+                <ButtonSection2>
+                    <Button onClick={props.onClose}>Close</Button>
+                    <Button>Add to Cart</Button>
+                </ButtonSection2>
             </ModalBody>
         </Modal>
     )
