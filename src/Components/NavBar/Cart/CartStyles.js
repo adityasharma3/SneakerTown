@@ -41,3 +41,7 @@ export const ShoeDisplay = styled.div`
         width: 220px;
     }
 `;
+
+export const TotalPrice = styled.div `
+    
+`;
