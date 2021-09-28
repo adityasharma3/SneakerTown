@@ -55,7 +55,7 @@ const ProductModal = (props) => {
 
                 <ButtonSection2>
                     <Button onClick={props.onClose}>Close</Button>
-                    <Button>Add to Cart</Button>
+                    {/* <Button>Add to Cart</Button> */}
                 </ButtonSection2>
             </ModalBody>
         </Modal>

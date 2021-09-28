@@ -13,7 +13,7 @@ const Sneakers = (props) => {
         fetch(datapoint)
             .then(res => res.json())
             .then(data => {
-                console.log(data.sneakers);
+                // console.log(data.sneakers);
                 setSneakers(data.sneakers);
             });
 
