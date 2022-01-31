@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import { Button } from '../NavBarStyles';
+import { Button } from '../NavBar/NavBarStyles';
 import { CartHeader, CompleteCart, CartBody } from './CartStyles';
 import CartDisplay from './CartDisplay';
 

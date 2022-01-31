@@ -30,3 +30,11 @@ export const Button = styled.button`
         transition: 100ms ease;
     }
 `;
+
+// export const SubNavBar = styled.nav`
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     width: 100%;
+//     height: min-content;
+// `;

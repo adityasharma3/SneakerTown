@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { Button } from '../NavBarStyles';
+import { Button } from '../NavBar/NavBarStyles';
 import { ShoeDisplay, TotalPrice } from './CartStyles';
 
 const CartDisplay = (props) => {

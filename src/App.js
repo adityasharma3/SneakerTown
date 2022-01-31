@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import NavBar from './Components/NavBar/NavBar';
-import Sneakers from './Components/Sneakers/Sneakers';
+import MenuOptions from './Components/MenuOptions/MenuOptions'
 
 function App(props) {
 
@@ -17,7 +17,9 @@ function App(props) {
   return (
     <Fragment>
       <NavBar cartData={cartItems} />
-      <Sneakers cartSectionData={cartSectionDataHandler} />
+      {/* <NavBar /> */}
+      {/* <Sneakers cartSectionData={cartSectionDataHandler} /> */}
+      <MenuOptions />
     </Fragment>
   );
 }
