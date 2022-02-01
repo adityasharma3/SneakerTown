@@ -1,60 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import { StyledMenuOptions, MenuButton } from "./Styles";
+
+// import CircularLoader from '../Loading/CircularLoader';
+
 
 const datapoint = `https://raw.githubusercontent.com/Stupidism/goat-sneakers/master/api.json`;
 
-
 const MenuOptions = () => {
+  const [options, setOptions] = useState([]);
+  const [isLoading, setisLoading] = useState(true);
 
-    const [options, setOptions] = useState([]);
+  useEffect(() => {
+    fetch(datapoint)
+      .then((data) => data.json())
+      .then((res) => {
+        res.sneakers.forEach((element) => {
+          setOptions((prev) => {
+            return new Set([...prev, element.brand_name]);
+          });
+        });
+      });
 
+    setisLoading(false);
+  }, []);
 
-    useEffect(() => {
-        // fetch(datapoint)
-        fetch(datapoint)
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data.sneakers);
-                // setOptions(data.sneakers.category);
-                // console.log(options);
+  // console.log(options);
 
-                // console.log(data);
-
-                let cleaned_data = [];
-
-                // cleaned_data.push(data.sneakers.map(item) => return [
-                //    item.brand_name
-                // ]);
-
-                // cleaned_data = [...new Set(cleaned_data.sneakers)];
-
-                console.log(cleaned_data);
-
-                cleaned_data.map((item) => {
-                    console.log(item);
-
-                    // if (!options.includes(item)) {
-
-                    //     setOptions((prevData) => {
-                    //         return [...prevData,
-                    //         item]
-                    //     });
-                    // console.log(options);
-                    setOptions((prev) => {
-                        return [...prev, item];
-                    })
-                });
-            })
-
-            console.log(options);
-    }, []);
-
-    
-    // console.log(options);
+  console.log(Array.from(options).map((item) => console.log(item)));
 
   return (
-  <ul>
-      <li></li>
-  </ul>);
+    <StyledMenuOptions>
+      {(isLoading) ?  <h2>Loading...</h2> : Array.from(options).map((item) => (
+        <MenuButton>
+          <h3>{item}</h3>
+        </MenuButton>
+      ))}
+    </StyledMenuOptions>
+  );
 };
 
 export default MenuOptions;

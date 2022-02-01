@@ -6,7 +6,7 @@ export const Navbar = styled.nav`
     justify-content: space-around;
     width: 100%;
     top: 0;
-    position: fixed;
+    /* position: fixed; */
     background-image: linear-gradient(to right , #0D1B3C,#9273EA,#0D1B3C);
 `;
 
