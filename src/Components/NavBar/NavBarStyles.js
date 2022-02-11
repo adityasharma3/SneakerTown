@@ -31,10 +31,13 @@ export const Button = styled.button`
     }
 `;
 
-// export const SubNavBar = styled.nav`
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-around;
-//     width: 100%;
-//     height: min-content;
-// `;
+export const DropDownBtn = styled.button`
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    /* right: -10rem; */
+    right: 2%;
+    top: 2.5%;
+`;

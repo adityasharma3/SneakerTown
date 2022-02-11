@@ -3,6 +3,7 @@ import NavBar from './Components/NavBar/NavBar';
 import MenuOptions from './Components/MenuOptions/MenuOptions'
 
 import { useSelector } from 'react-redux';
+import Grid from './Grid/Grid';
 
 function App(props) {
 
@@ -14,6 +15,7 @@ function App(props) {
     <Fragment>
       <NavBar cartData={cartItems} />
       {isToggled && <MenuOptions />}
+      <Grid />
     </Fragment>
   );
 }

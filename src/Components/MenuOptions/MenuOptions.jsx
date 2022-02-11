@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StyledMenuOptions, MenuButton } from "./Styles";
 
-// import CircularLoader from '../Loading/CircularLoader';
-
 
 const datapoint = `https://raw.githubusercontent.com/Stupidism/goat-sneakers/master/api.json`;
 

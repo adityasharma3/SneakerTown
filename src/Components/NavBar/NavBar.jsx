@@ -1,8 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Navbar, Button } from "./NavBarStyles";
+import { Navbar, Button, DropDownBtn } from "./NavBarStyles";
 
 import { useDispatch } from "react-redux";
-import uislice from "../../store/uiSlice";
 import { uiSliceActions } from "../../store/uiSlice";
 
 const NavBar = (props) => {
@@ -24,7 +23,7 @@ const NavBar = (props) => {
           Cart {props.cartData.length === 0 ? null : props.cartData.length}
         </Button>
 
-        <Button onClick={dropButtonHandler}>Drop</Button>
+        <DropDownBtn onClick={dropButtonHandler}>V</DropDownBtn>
       </Navbar>
     </Fragment>
   );
