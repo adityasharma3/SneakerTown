@@ -4,26 +4,26 @@ const Grid = () => {
   return (
     // <div>Grid</div>
 
-    <section class="container">
-      <div class="card daniel">
-        <div class="card-header">
-          <div class="profile">
+    <section className="container">
+      <div className="card daniel">
+        <div className="card-header">
+          <div className="profile">
             {/* <img src="images/image-daniel.jpg" alt="Daniel Clifford"> */}
           </div>
-          <div class="about">
-            <p class="name">Daniel Clifford</p>
-            <p class="verified">Verified Graduate</p>
+          <div className="about">
+            <p className="name">Daniel Clifford</p>
+            <p className="verified">Verified Graduate</p>
           </div>
         </div>
-        <div class="card-middle">
-          <h3 class="intro">
+        <div className="card-middle">
+          <h3 className="intro">
             I received a job offer mid-course, and the subjects I learned were
             current, if not more so, in the company I joined. I honestly feel I
             got every penny’s worth.
           </h3>
         </div>
-        <div class="card-footer">
-          <p class="outro">
+        <div className="card-footer">
+          <p className="outro">
             “ I was an EMT for many years before I joined the bootcamp. I’ve
             been looking to make a transition and have heard some people who had
             an amazing experience here. I signed up for the free intro course
@@ -34,46 +34,46 @@ const Grid = () => {
           </p>
         </div>
       </div>
-      <div class="card jonathan">
-        <div class="card-header">
-          <div class="profile">
+      <div className="card jonathan">
+        <div className="card-header">
+          <div className="profile">
             {/* <img src="images/image-jonathan.jpg" alt="Daniel Clifford"> */}
           </div>
-          <div class="about">
-            <p class="name">Jonathan Walters</p>
-            <p class="verified">Verified Graduate</p>
+          <div className="about">
+            <p className="name">Jonathan Walters</p>
+            <p className="verified">Verified Graduate</p>
           </div>
         </div>
-        <div class="card-middle">
-          <h3 class="intro">
+        <div className="card-middle">
+          <h3 className="intro">
             The team was very supportive and kept me motivated
           </h3>
         </div>
-        <div class="card-footer">
-          <p class="outro">
+        <div className="card-footer">
+          <p className="outro">
             “ I started as a total newbie with virtually no coding skills. I now
             work as a mobile engineer for a big company. This was one of the
             best investments I’ve made in myself. ”
           </p>
         </div>
       </div>
-      <div class="card kira">
-        <div class="card-header">
-          <div class="profile">
+      <div className="card kira">
+        <div className="card-header">
+          <div className="profile">
             {/* <img src="images/image-kira.jpg" alt="Daniel Clifford"> */}
           </div>
-          <div class="about">
-            <p class="name">Kira Whittle</p>
-            <p class="verified">Verified Graduate</p>
+          <div className="about">
+            <p className="name">Kira Whittle</p>
+            <p className="verified">Verified Graduate</p>
           </div>
         </div>
-        <div class="card-middle">
-          <h3 class="intro">
+        <div className="card-middle">
+          <h3 className="intro">
             Such a life-changing experience. Highly recommended!
           </h3>
         </div>
-        <div class="card-footer">
-          <p class="outro">
+        <div className="card-footer">
+          <p className="outro">
             “ Before joining the bootcamp, I’ve never written a line of code. I
             needed some structure from professionals who can help me learn
             programming step by step. I was encouraged to enroll by a former
@@ -89,45 +89,47 @@ const Grid = () => {
           </p>
         </div>
       </div>
-      <div class="card jeanette">
-        <div class="card-header">
-          <div class="profile">
+      <div className="card jeanette">
+        <div className="card-header">
+          <div className="profile">
             {/* <img src="images/image-jeanette.jpg" alt="Daniel Clifford"> */}
           </div>
-          <div class="about">
-            <p class="name">jeanette Harmon</p>
-            <p class="verified">Verified Graduate</p>
+          <div className="about">
+            <p className="name">jeanette Harmon</p>
+            <p className="verified">Verified Graduate</p>
           </div>
         </div>
-        <div class="card-middle">
-          <h3 class="intro">An overall wonderful and rewarding experience</h3>
+        <div className="card-middle">
+          <h3 className="intro">
+            An overall wonderful and rewarding experience
+          </h3>
         </div>
-        <div class="card-footer">
-          <p class="outro">
+        <div className="card-footer">
+          <p className="outro">
             “ Thank you for the wonderful experience! I now have a job I really
             enjoy, and make a good living while doing something I love. ”{" "}
           </p>
         </div>
       </div>
-      <div class="card patrick">
-        <div class="card-header">
-          <div class="profile">
+      <div className="card patrick">
+        <div className="card-header">
+          <div className="profile">
             {/* <img src="images/image-patrick.jpg" alt="Daniel Clifford"> */}
           </div>
-          <div class="about">
-            <p class="name">Patrick Abrams</p>
-            <p class="verified">Verified Graduate</p>
+          <div className="about">
+            <p className="name">Patrick Abrams</p>
+            <p className="verified">Verified Graduate</p>
           </div>
         </div>
-        <div class="card-middle">
-          <h3 class="intro">
+        <div className="card-middle">
+          <h3 className="intro">
             Awesome teaching support from TAs who did the bootcamp themselves.
             Getting guidance from them and learning from their experiences was
             easy.
           </h3>
         </div>
-        <div class="card-footer">
-          <p class="outro">
+        <div className="card-footer">
+          <p className="outro">
             “ The staff seem genuinely concerned about my progress which I find
             really refreshing. The program gave me the confidence necessary to
             be able to go out in the world and present myself as a capable

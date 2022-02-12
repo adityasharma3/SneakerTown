@@ -77,14 +77,15 @@ body {
   /* border: 2px solid white; */
 }
 
-.card p,
-h3 {
-  color: transparent;
-}
-
 .card:hover {
   color: white;
   transition: 0.4s ease;
+}
+
+.card:hover .outro > p,
+h3 {
+  display: block;
+  color: whitesmoke;
 }
 
 .card-header {
@@ -106,8 +107,13 @@ h3 {
 .profile {
   width: 2.5rem;
   position: absolute;
-  bottom: 0;
-  left: 0;
+
+  /* left: 0; */
+}
+
+.about {
+  /* position: absolute; */
+  /* bott */
 }
 
 .profile > img {
@@ -144,23 +150,12 @@ h3 {
   background-position: center;
 }
 
-.kira .verified,
-.jeanette .verified {
-  /* color: var(--vdbb); */
-}
-
 .kira .middle,
 .jeanette .middle {
   color: white;
 }
 
-.kira .outro,
-.jeanette .outro {
-  /* color: hsl(219 29% 14% / 0.5); */
-}
-
 .patrick {
-  /* background-color: var(--vdbb); */
   grid-row: 2/3;
   grid-column: 2/4;
   background: url(./Components/assets/gridPhotos/2.jpeg);
@@ -187,12 +182,14 @@ h3 {
 }
 
 .card:hover {
-  transform: scale(1.01);
+  cursor: pointer;
+  transition: 0.3s ease;
+  transform: scale(1.05);
 }
 
-/* Mobile  */
+/*  Mobile  */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   body {
     width: auto;
     height: auto;
