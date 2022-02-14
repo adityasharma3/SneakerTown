@@ -1,37 +1,36 @@
 const data = [
     {
         "box_condition": "no_original_box",
-        "brand_name": "Air Jordan",
+        "brand_name": "Nike",
         "category": [
-            "basketball"
+            "lifestyle"
         ],
         "collection_slugs": [
-            "goat-clean",
-            "jordan"
+            "air-max-day"
         ],
-        "color": "Red",
-        "designer": "Tinker Hatfield",
-        "details": "Gym Red/Black-White",
+        "color": "Black",
+        "designer": "Christian Tresser",
+        "details": "Black/Reflect Silver-Blue Lagoon",
         "gender": [
             "men"
         ],
-        "grid_picture_url": "https://image.goat.com/375/attachments/product_template_pictures/images/008/870/353/original/235806_00.png.png",
+        "grid_picture_url": "https://image.goat.com/375/attachments/product_template_pictures/images/020/627/570/original/491891_00.png.png",
         "has_picture": true,
         "has_stock": true,
-        "id": 235806,
+        "id": 491891,
         "keywords": [],
-        "main_picture_url": "https://image.goat.com/750/attachments/product_template_pictures/images/008/870/353/original/235806_00.png.png",
+        "main_picture_url": "https://image.goat.com/750/attachments/product_template_pictures/images/020/627/570/original/491891_00.png.png",
         "midsole": "Air",
-        "name": "Air Jordan 11 Retro 'Win Like '96'",
-        "nickname": "Win Like '96",
-        "original_picture_url": "https://image.goat.com/attachments/product_template_pictures/images/008/870/353/original/235806_00.png.png",
-        "product_template_id": 235806,
-        "release_date": "2017-12-09T23:59:59.000Z",
-        "release_date_unix": 1512863999,
-        "release_year": 2017,
-        "retail_price_cents": 22000,
+        "name": "Air Max 97 'On Air: Neon Seoul'",
+        "nickname": "Neon Seoul",
+        "original_picture_url": "https://image.goat.com/attachments/product_template_pictures/images/020/627/570/original/491891_00.png.png",
+        "product_template_id": 491891,
+        "release_date": "2019-04-13T07:00:00.000Z",
+        "release_date_unix": 1555138800,
+        "release_year": 2019,
+        "retail_price_cents": 20000,
         "shoe_condition": "used",
-        "silhouette": "Air Jordan 11",
+        "silhouette": "Air Max 97",
         "size_range": [
             10,
             10.5,
@@ -64,45 +63,45 @@ const data = [
             9,
             9.5
         ],
-        "sku": "378037 623",
-        "slug": "air-jordan-11-retro-gym-red-378037-623-abb4fed8-42d8-4998-9858-47500cc06cc7",
+        "sku": "CI1503 001",
+        "slug": "air-max-97-neon-seoul-am-97-seoul",
         "status": "active",
-        "story_html": "<p>For Chicago Bulls Fans, the historical significance of the Air Jordan 11 Retro ‘Win Like 96’ will be abundantly clear. 1996 is the year that the Bulls capped off the regular season with a record-breaking 72 wins, on their way to a fourth NBA title in six seasons. Michael wore the Jordan 11 during that magical run, and this December 2017 release, dressed in a dazzling shade of red, honors the ’96 squad that couldn’t lose.</p>\n",
-        "upper_material": "Patent Leather"
+        "story_html": "<p>In celebration of Air Max Day, Nike hosted the Nike: On Air contest in 2018, giving residents the chance to create their own Air Max designs inspired by their hometowns. After working alongside Nike developers, winner Gwang Shin debuted his Nike Air Max 97 &#39;Neon Seoul&#39; sneaker in April 2019. Paying tribute to his city, Seoul, Shin draws influences from the famed neon signs in South Korea’s capital, decorating the leather upper with vivid-colored piping.</p>\n",
+        "upper_material": null
     },
     {
         "box_condition": "good_condition",
-        "brand_name": "Gucci",
+        "brand_name": "Air Jordan",
         "category": [
-            "other"
+            "lifestyle"
         ],
         "collection_slugs": [
-            "gucci",
-            "luxury"
+            "just-dropped",
+            "just-dropped-1"
         ],
-        "color": "Black",
-        "designer": "",
-        "details": "Black",
+        "color": "Brown",
+        "designer": "Tinker Hatfield",
+        "details": "Shimmer/Mahogany Mink-Velvet Brown-Tough Red",
         "gender": [
             "men"
         ],
-        "grid_picture_url": "https://image.goat.com/375/attachments/product_template_pictures/images/009/249/006/original/259509_00.png.png",
+        "grid_picture_url": "https://image.goat.com/375/attachments/product_template_pictures/images/021/321/847/original/473391_00.png.png",
         "has_picture": true,
         "has_stock": true,
-        "id": 259509,
+        "id": 473391,
         "keywords": [],
-        "main_picture_url": "https://image.goat.com/750/attachments/product_template_pictures/images/009/249/006/original/259509_00.png.png",
-        "midsole": "",
-        "name": "Gucci Pursuit '72 Rubber Slide 'Black'",
-        "nickname": "Black",
-        "original_picture_url": "https://image.goat.com/attachments/product_template_pictures/images/009/249/006/original/259509_00.png.png",
-        "product_template_id": 259509,
-        "release_date": null,
-        "release_date_unix": null,
-        "release_year": null,
-        "retail_price_cents": 21000,
-        "shoe_condition": "used",
-        "silhouette": "Gucci Slide",
+        "main_picture_url": "https://image.goat.com/750/attachments/product_template_pictures/images/021/321/847/original/473391_00.png.png",
+        "midsole": "Air",
+        "name": "Patta x Air Jordan 7 Retro OG SP 'Shimmer'",
+        "nickname": "Shimmer",
+        "original_picture_url": "https://image.goat.com/attachments/product_template_pictures/images/021/321/847/original/473391_00.png.png",
+        "product_template_id": 473391,
+        "release_date": "2019-05-18T07:00:00.000Z",
+        "release_date_unix": 1558162800,
+        "release_year": 2019,
+        "retail_price_cents": 20000,
+        "shoe_condition": "new_no_defects",
+        "silhouette": "Air Jordan 7",
         "size_range": [
             10,
             10.5,
@@ -119,6 +118,9 @@ const data = [
             16,
             16.5,
             17,
+            17.5,
+            18,
+            3.5,
             4,
             4.5,
             5,
@@ -132,11 +134,11 @@ const data = [
             9,
             9.5
         ],
-        "sku": "308234 GIB10 1098",
-        "slug": "gucci-pursuit-72-rubber-slides-black-308234-gib10-1098",
+        "sku": "AT3375 200",
+        "slug": "patta-x-air-jordan-7-retro-og-sp-shimmer-patta-aj7-shm",
         "status": "active",
-        "story_html": "<p>The Gucci Pursuit ‘72 Rubber Slide in ‘Black’ sneaker pays homage to the fashion house&#39;s roots with the iconic Web stripe—first developed by Gucci in the 1950s—taking the stage. The minimal, open-toe silhouette features a thick black rubber sole with a rounded shape. The top portion of the slide is a rubber strap displaying the Gucci Web green and red striped motif, and the design is finished with a Gucci logo embossed on the outer midsole.</p>\n",
-        "upper_material": ""
+        "story_html": "<p>Amsterdam-based boutique and streetwear brand, Patta joins forces with Jordan Brand to lend their signature aesthetic to the Patta x Air Jordan 7 Retro OG SP &#39;Shimmer&#39; sneaker. Part of a limited-edition capsule collection released in May 2019, this rendition sports an earth-toned color palette of Shimmer, Mahogany Mink, Velvet Brown and Tough Red hues on a premium leather and suede upper. Unique perforation patterns and an offset Jumpman logo accent the underlay, while signature Patta script dresses the triple-tone midsole. A durable rubber outsole equipped with Air technology reinforces the design, which is inspired by Michael Jordan&#39;s run with the Dream Team at the 1992 Summer Games in Barcelona.</p>\n",
+        "upper_material": null
     },
     {
         "box_condition": "no_original_box",
@@ -284,7 +286,8 @@ const data = [
         "status": "active",
         "story_html": null,
         "upper_material": ""
-    }
+    },
+
 ]
 
 export default data;

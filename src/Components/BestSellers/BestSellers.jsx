@@ -2,6 +2,8 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Container } from "./BestSellerStyles";
 import data from "../../data/best-sellers";
 import PopularSneaker from "./PopularSneaker";
+import { Button } from "./PopularSneakerStyles";
+import { Link } from "react-router-dom";
 
 const BestSellers = () => {
   const [sneakers, setSneakers] = useState([]);
@@ -26,6 +28,11 @@ const BestSellers = () => {
           <PopularSneaker data={item} key={item.id} />
         ))}
       </Container>
+
+      <Button>
+        <Link to="/view-all">View All products</Link>
+      </Button>
+      <br></br>
     </Fragment>
   );
 };

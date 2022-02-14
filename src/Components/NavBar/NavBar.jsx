@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Navbar, Button, DropDownBtn } from "./NavBarStyles";
+import { Link } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 import { uiSliceActions } from "../../store/uiSlice";
@@ -20,10 +21,9 @@ const NavBar = (props) => {
       <Navbar>
         <h1>SneakerTown</h1>
         <Button onClick={() => setShowCart(true)}>
-          Cart {props.cartData.length === 0 ? null : props.cartData.length}
+          <Link to="/cart">Cart</Link>
+          {props.cartData.length === 0 ? null : props.cartData.length}
         </Button>
-
-        <DropDownBtn onClick={dropButtonHandler}>V</DropDownBtn>
       </Navbar>
     </Fragment>
   );

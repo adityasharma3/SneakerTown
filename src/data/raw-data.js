@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     "healthcheck": {
         "message": "OK"
     },
@@ -6058,3 +6058,5 @@ export const data = {
         }
     ]
 }
+
+export default data;
