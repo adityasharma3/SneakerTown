@@ -8,6 +8,7 @@ export const Navbar = styled.nav`
     top: 0;
     /* position: fixed; */
     background-image: linear-gradient(to right , #0D1B3C,#9273EA,#0D1B3C);
+    padding: 1vh;
 `;
 
 export const Button = styled.button`

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import SneakerView from "../Components/SneakerView/SneakerView";
 
 const datapoint = `https://raw.githubusercontent.com/Stupidism/goat-sneakers/master/api.json`;
@@ -14,10 +13,6 @@ const ViewAll = () => {
       .then((data) => setSneakers(data.sneakers));
   }, []);
 
-  // const SneakerClickHandler = (item) => {
-  //   useNavigate("/view/{item.id}");
-  // };
-
   return (
     <div
       style={{
@@ -28,13 +23,7 @@ const ViewAll = () => {
       }}
     >
       {sneakers.map((item) => (
-        // <Link to={"/view/" + item.id}>
-        <SneakerView
-          key={item.id}
-          data={item}
-          // onClick={SneakerClickHandler(item)}
-        />
-        // </Link>
+        <SneakerView key={item.id} data={item} />
       ))}
     </div>
   );

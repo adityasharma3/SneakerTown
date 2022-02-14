@@ -19,7 +19,17 @@ const NavBar = (props) => {
   return (
     <Fragment>
       <Navbar>
-        <h1>SneakerTown</h1>
+        <Link
+          to="/"
+          style={{
+            display: "flex",
+            fontSize: "25px",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          SneakerTown
+        </Link>
         <Button onClick={() => setShowCart(true)}>
           <Link to="/cart">Cart</Link>
           {props.cartData.length === 0 ? null : props.cartData.length}

@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import NavBar from './Components/NavBar/NavBar';
-// import MenuOptions from './Components/MenuOptions/MenuOptions'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
