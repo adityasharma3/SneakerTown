@@ -1,5 +1,10 @@
 import React from "react";
+import CartDisplay from "../Components/Cart/CartDisplay";
 
 export const Cart = () => {
-  return <div>Cart</div>;
+  return (
+    <div>
+      <CartDisplay />
+    </div>
+  );
 };

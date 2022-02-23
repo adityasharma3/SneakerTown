@@ -28,20 +28,34 @@ export const CartHeader = styled.div`
 
 export const ShoeDisplay = styled.div`
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    width: 60%;
     color: whitesmoke;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 1rem auto;
-    background-color: #1D273D;
-    border-radius: 2rem;
 
     img {
         width: 220px;
     }
 `;
 
-export const TotalPrice = styled.div `
+export const LeftSections = styled.div`
+    display: flex;
+    align-items: left;
+    width :20%;
+`;
+
+export const RightSections = styled.div`
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto 5%;
+    width: 80%;
+
+    h2,p {
+        margin: 0;
+    }
+`;
+
+export const TotalPrice = styled.div`
     
 `;

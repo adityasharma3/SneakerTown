@@ -4,9 +4,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    /* margin: auto 5vw; */
     flex-direction: column;
-    /* border : 1px solid white; */
     margin: 2rem 1.5rem;
     padding: 1rem;
     border-radius: 2rem;
@@ -33,6 +31,7 @@ export const Button = styled.button`
     padding: 1rem 2rem;
     border-radius : 1rem;
     margin : auto;
+    cursor: pointer;
 
     :hover {
         transform: scale(1.1);
