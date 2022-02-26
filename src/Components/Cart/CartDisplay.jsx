@@ -1,14 +1,10 @@
 import React, { Fragment, useState } from "react";
 import { Button } from "../NavBar/NavBarStyles";
-import {
-  LeftSections,
-  RightSections,
-  ShoeDisplay,
-  TotalPrice,
-} from "./CartStyles";
+import { LeftSections, RightSections, ShoeDisplay } from "./CartStyles";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { cartSliceActions } from "../../store/cartSlice";
+import Checkout from "./Checkout";
 
 const CartDisplay = (props) => {
   const dispatch = useDispatch();
@@ -18,8 +14,6 @@ const CartDisplay = (props) => {
   };
 
   const cartItems = useSelector((state) => state.cart.items);
-
-  console.log(cartItems);
 
   if (cartItems == "") {
     return (
@@ -66,7 +60,7 @@ const CartDisplay = (props) => {
             </Button>
             <p>{item.size} UK</p>
             <p>Quantity : {item.quantity}</p>
-            <h3>₹{(item.totalPrice / 100) * 72}</h3>
+            <h3>₹{item.price}</h3>
           </RightSections>
         </ShoeDisplay>
         <hr

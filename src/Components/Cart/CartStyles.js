@@ -56,6 +56,33 @@ export const RightSections = styled.div`
     }
 `;
 
-export const TotalPrice = styled.div`
-    
+export const CheckoutDisplay = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            background-color: #413D7F;
+            color: whitesmoke;
+            outline: none;
+            border: none;
+            height: 2rem;
+            border-radius: 0.5rem;
+            padding: 0.25rem;
+            font-family: inherit;
+        }
+    }
+`;
+
+export const BillingSection = styled.div`
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    width:60%;
+    flex-direction:column;
 `;

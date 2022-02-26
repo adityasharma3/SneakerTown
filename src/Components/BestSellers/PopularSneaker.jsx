@@ -2,6 +2,8 @@ import React, { Fragment, useState } from "react";
 import { Button, Container } from "./PopularSneakerStyles";
 import { useDispatch } from "react-redux";
 import { cartSliceActions } from "../../store/cartSlice";
+import { sneakerSliceActions } from "../../store/sneakerSlice";
+import { Link } from "react-router-dom";
 
 const PopularSneaker = ({ data }) => {
   const dispatch = useDispatch();
@@ -9,11 +11,18 @@ const PopularSneaker = ({ data }) => {
   const addToCartHandler = () => {
     dispatch(cartSliceActions.addItemToCart(data));
   };
+
+  const imageClickHandler = () => {
+    dispatch(sneakerSliceActions.find(data));
+  };
+
   return (
     <Fragment>
       <Container>
         <h3>{data.name}</h3>
-        <img src={data.grid_picture_url} />
+        <Link to={"/view/" + data.id}>
+          <img src={data.grid_picture_url} onClick={imageClickHandler} />
+        </Link>
         <Button onClick={addToCartHandler}>Add to cart</Button>
       </Container>
     </Fragment>
