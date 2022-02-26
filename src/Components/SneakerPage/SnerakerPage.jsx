@@ -9,7 +9,7 @@ const SnerakerPage = ({ shoeData }) => {
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {
-    if (size == "Select size (UK)") {
+    if (size === "Select size (UK)") {
       alert("Please enter shoe size");
       return;
     }

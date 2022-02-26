@@ -10,7 +10,7 @@ const BestSellers = () => {
 
   useEffect(() => {
     setSneakers(data);
-  });
+  }, []);
 
   return (
     <Fragment>

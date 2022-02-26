@@ -26,7 +26,6 @@ const SneakerView = ({ data }) => {
           dispatch(sneakerSliceActions.find(data));
         }}
         style={{
-          backgroundColor: "#1A1C36",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-evenly",
@@ -37,7 +36,7 @@ const SneakerView = ({ data }) => {
         }}
       >
         <h3>{data.name}</h3>
-        <img src={data.grid_picture_url} />
+        <img src={data.grid_picture_url} alt={data.name} />
       </Link>
       <BottomSection>
         <h3>₹{(data.retail_price_cents / 100) * 72}</h3>

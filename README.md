@@ -1,6 +1,6 @@
 # SneakerTown
 
-A sample ecommerce store built using React js
+A sample ecommerce store built majorly using React js, Redux, and React Router.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

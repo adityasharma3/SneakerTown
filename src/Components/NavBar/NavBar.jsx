@@ -1,20 +1,10 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { Navbar, Button, DropDownBtn } from "./NavBarStyles";
+import React, { Fragment } from "react";
+import { Navbar, Button } from "./NavBarStyles";
 import { Link } from "react-router-dom";
-
-import { useDispatch } from "react-redux";
-import { uiSliceActions } from "../../store/uiSlice";
+import { useSelector } from "react-redux";
 
 const NavBar = (props) => {
-  const [showCart, setShowCart] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
-  // const []
-
-  const dispatch = useDispatch();
-
-  const dropButtonHandler = () => {
-    dispatch(uiSliceActions.toggle());
-  };
+  const cartItems = useSelector((state) => state.cart.items);
 
   return (
     <Fragment>
@@ -30,9 +20,24 @@ const NavBar = (props) => {
         >
           SneakerTown
         </Link>
-        <Button onClick={() => setShowCart(true)}>
+        <Button>
           <Link to="/cart">Cart</Link>
-          {props.cartData.length === 0 ? null : props.cartData.length}
+          {cartItems.length !== 0 && (
+            <p
+              style={{
+                margin: "0",
+                marginLeft: "1rem",
+                background: "red",
+                padding: " 0 0.35rem",
+                borderRadius: "50%",
+                color: "whitesmoke",
+                cursor: "pointer",
+                width: "min-content",
+              }}
+            >
+              {cartItems.length}
+            </p>
+          )}
         </Button>
       </Navbar>
     </Fragment>

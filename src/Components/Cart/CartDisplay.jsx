@@ -1,10 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Button } from "../NavBar/NavBarStyles";
 import { LeftSections, RightSections, ShoeDisplay } from "./CartStyles";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { cartSliceActions } from "../../store/cartSlice";
-import Checkout from "./Checkout";
 
 const CartDisplay = (props) => {
   const dispatch = useDispatch();
@@ -15,7 +14,7 @@ const CartDisplay = (props) => {
 
   const cartItems = useSelector((state) => state.cart.items);
 
-  if (cartItems == "") {
+  if (cartItems === "") {
     return (
       <div
         className="no--cart--items"
@@ -42,7 +41,7 @@ const CartDisplay = (props) => {
       <Fragment key={item.id}>
         <ShoeDisplay key={item.id} style={{ position: "relative" }}>
           <LeftSections>
-            <img src={item.image} />
+            <img src={item.image} alt={item.name} />
           </LeftSections>
 
           <RightSections>

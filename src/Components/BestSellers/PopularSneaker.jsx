@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Button, Container } from "./PopularSneakerStyles";
 import { useDispatch } from "react-redux";
 import { cartSliceActions } from "../../store/cartSlice";
@@ -21,7 +21,11 @@ const PopularSneaker = ({ data }) => {
       <Container>
         <h3>{data.name}</h3>
         <Link to={"/view/" + data.id}>
-          <img src={data.grid_picture_url} onClick={imageClickHandler} />
+          <img
+            src={data.grid_picture_url}
+            onClick={imageClickHandler}
+            alt={data.id}
+          />
         </Link>
         <Button onClick={addToCartHandler}>Add to cart</Button>
       </Container>

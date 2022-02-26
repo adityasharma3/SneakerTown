@@ -25,9 +25,10 @@ const Categories = () => {
   return (
     <Fragment>
       <Container>
-        {Array.from(options).map((item) => (
-          <Category key={Math.random()} item={item} />
-        ))}
+        {!isLoading &&
+          Array.from(options).map((item) => {
+            return <Category key={Math.random()} item={item} />;
+          })}
       </Container>
     </Fragment>
   );
