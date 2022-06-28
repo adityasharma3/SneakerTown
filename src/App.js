@@ -6,20 +6,29 @@ import Home from './pages/Home';
 import { Cart } from './pages/Cart';
 import View from './pages/View';
 import ViewAll from './pages/ViewAll';
+import { useSelector } from 'react-redux';
+import { selectUser } from './store/userSlice';
+import Landing from './pages/Landing';
 
 function App() {
 
+  const user = useSelector(selectUser);
+
+  // console.log(user);
 
   return (
     <Router>
       <Fragment>
         <NavBar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/view-all' element={<ViewAll />} />
-          <Route path='/view/:id' element={<View />} />
-        </Routes>
+        {!user ? <Landing /> :
+          (
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/view-all' element={<ViewAll />} />
+              <Route path='/view/:id' element={<View />} />
+            </Routes>
+          )}
       </Fragment>
     </Router>
   );

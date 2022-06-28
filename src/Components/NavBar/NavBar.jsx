@@ -39,6 +39,8 @@ const NavBar = (props) => {
             </p>
           )}
         </Button>
+
+        {/* <Button>Login/Signup</Button> */}
       </Navbar>
     </Fragment>
   );

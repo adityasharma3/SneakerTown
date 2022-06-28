@@ -1,5 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { projectFirestore } from "../../config/firebaseConfig";
 import { cartSliceActions } from "../../store/cartSlice";
 import { Container, MiddleSection, Select, Button, Story } from "./Styles";
 
@@ -8,6 +9,22 @@ const SnerakerPage = ({ shoeData }) => {
 
   const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   // const sub = projectFirestore
+  //   //   .collection('cart')
+  //   //   .orderBy('timestamp' , 'desc')
+  //   //   .onSnapshot((snap) => {
+  //   //     let documents = [];
+
+  //   //     snap.forEach((item) => {
+  //   //       documents.push({
+  //   //         ...doc.data(),
+  //   //         id : doc.id
+  //   //       })
+  //   //     })
+  //   //   });
+  // },[projectFirestore]);
+
   const addToCartHandler = () => {
     if (size === "Select size (UK)") {
       alert("Please enter shoe size");
@@ -15,6 +32,11 @@ const SnerakerPage = ({ shoeData }) => {
     }
 
     dispatch(cartSliceActions.addItemToCart({ size, ...shoeData }));
+
+    // adding shoe to firestore database
+    // projectFirestore
+    //   .collection('cart')
+    //   .where()
   };
 
   const selectedSize = useRef();
