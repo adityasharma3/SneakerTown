@@ -4,7 +4,9 @@ A sample ecommerce store built majorly using React js, Redux, and React Router.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Home Page
+under construction 🚧
+
+<!-- Home Page
 <img src="./screenshots/home.png">
 
 View Sneakers page
@@ -14,4 +16,4 @@ View Single sneaker
 <img src="./screenshots/view.png">
 
 cart
-<img src="./screenshots/cart.png">
+<img src="./screenshots/cart.png"> -->
