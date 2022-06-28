@@ -34,7 +34,7 @@ const PreoLogin = () => {
                 uid: userAuth.user.uid,
                 email: userDetails.email,
                 password: userDetails.password,
-                displayName: userDetails.name,
+                displayName: userDetails.userName,
               })
             );
           })

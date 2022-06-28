@@ -5,7 +5,6 @@ export const Navbar = styled.nav`
   z-index: 999;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   width: 100%;
   top: 0;
   /* position: fixed; */
@@ -14,6 +13,7 @@ export const Navbar = styled.nav`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
   border-radius: 0.5rem;
   outline: none;
   border: none;
@@ -44,3 +44,16 @@ export const DropDownBtn = styled.button`
   right: 2%;
   top: 2.5%;
 `;
+
+export const LeftHalf = styled.div`
+  display: flex;
+  width:50%;
+  justify-content: center;
+`;
+
+export const RightHalf = styled.div`
+  display: flex;
+  width:50%;
+  justify-content: center;
+  gap:1rem;
+` 
