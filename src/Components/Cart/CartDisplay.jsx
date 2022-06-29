@@ -1,18 +1,51 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Button } from "../NavBar/NavBarStyles";
 import { LeftSections, RightSections, ShoeDisplay } from "./CartStyles";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { cartSliceActions } from "../../store/cartSlice";
+import { projectFirestore } from "../../config/firebaseConfig";
+import { selectUser } from "../../store/userSlice";
 
 const CartDisplay = (props) => {
+  const [cartItems, setCartItems] = useState([{}]);
+
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+
+  useEffect(() => {
+    const sub = () => {
+      projectFirestore
+        .collection("cart_" + user.uid)
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snap) => {
+          let documents = [];
+
+          // documents.push({
+          //   ...doc.data(),
+          //   id: doc.id,
+          // });
+          snap.forEach((doc) => {
+            documents.push({
+              ...doc.data(),
+              id: doc.id,
+            });
+          });
+
+          setCartItems(documents);
+        });
+    };
+
+    return () => sub();
+  }, [projectFirestore]);
 
   const removeFromCartHandler = (id) => {
     dispatch(cartSliceActions.removeItemFromCart(id));
   };
 
-  const cartItems = useSelector((state) => state.cart.items);
+  // const cartItems = useSelector((state) => state.cart.items);
+
+  console.log(cartItems);
 
   if (cartItems === "") {
     return (

@@ -32,7 +32,7 @@ const cartSlice = createSlice({
                 existingItem.quantity++;
             }
 
-            state.items.map((item) => {
+            state.items.forEach((item) => {
                 const newItemPrice = item.price;
                 addedTotal += newItemPrice;
             });
@@ -60,5 +60,8 @@ const cartSlice = createSlice({
 });
 
 export const cartSliceActions = cartSlice.actions;
+
+// export const payload;
+// console.log(cartSliceActions);
 
 export default cartSlice;

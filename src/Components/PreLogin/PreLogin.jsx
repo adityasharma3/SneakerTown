@@ -37,9 +37,9 @@ const PreoLogin = () => {
                 displayName: userDetails.userName,
               })
             );
-          })
-          .catch((error) => alert(error));
-      });
+          });
+      })
+      .catch((error) => alert(error));
 
     setUserDetails({
       userName: "",
@@ -98,6 +98,7 @@ const PreoLogin = () => {
           <input
             type="email"
             placeholder="Email"
+            autoComplete="on"
             value={userDetails.email}
             onChange={(e) =>
               setUserDetails({
@@ -109,6 +110,7 @@ const PreoLogin = () => {
 
           <input
             type="password"
+            autoComplete="on"
             placeholder="Password"
             value={userDetails.password}
             onChange={(e) =>

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Button, Container } from "./PopularSneakerStyles";
+import { Button, Container, SpanSales } from "./PopularSneakerStyles";
 import { useDispatch } from "react-redux";
 import { cartSliceActions } from "../../store/cartSlice";
 import { sneakerSliceActions } from "../../store/sneakerSlice";
@@ -28,6 +28,7 @@ const PopularSneaker = ({ data }) => {
           />
         </Link>
         <Button onClick={addToCartHandler}>Add to cart</Button>
+        <SpanSales>{Math.round(Math.random() * 1000) + "📈"}</SpanSales>
       </Container>
     </Fragment>
   );

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -36,5 +37,22 @@ export const Button = styled.button`
     :hover {
         transform: scale(1.1);
         transition: 0.5s ease;
+    }
+`;
+
+export const SpanSales = styled.span`
+    display: flex;
+    align-items: center;
+    position:absolute;
+    top: 0px;
+    right: -1rem;
+    padding: 5px;
+    background-color: red;
+    border-radius:50%;
+    cursor: pointer;
+    text-align: center;
+
+    :hover {
+        font-size: large;
     }
 `;

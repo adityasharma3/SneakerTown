@@ -1,31 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { projectFirestore } from "../../config/firebaseConfig";
 import { cartSliceActions } from "../../store/cartSlice";
+import { selectUser } from "../../store/userSlice";
 import { Container, MiddleSection, Select, Button, Story } from "./Styles";
+import { serverTimestamp } from "@firebase/firestore";
 
 const SnerakerPage = ({ shoeData }) => {
   const [size, setSize] = useState("");
+  const cartItems = useSelector((state) => state.cart.items);
+  const user = useSelector(selectUser);
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   // const sub = projectFirestore
-  //   //   .collection('cart')
-  //   //   .orderBy('timestamp' , 'desc')
-  //   //   .onSnapshot((snap) => {
-  //   //     let documents = [];
-
-  //   //     snap.forEach((item) => {
-  //   //       documents.push({
-  //   //         ...doc.data(),
-  //   //         id : doc.id
-  //   //       })
-  //   //     })
-  //   //   });
-  // },[projectFirestore]);
-
   const addToCartHandler = () => {
+    console.log(cartItems);
     if (size === "Select size (UK)") {
       alert("Please enter shoe size");
       return;
@@ -33,10 +22,12 @@ const SnerakerPage = ({ shoeData }) => {
 
     dispatch(cartSliceActions.addItemToCart({ size, ...shoeData }));
 
-    // adding shoe to firestore database
-    // projectFirestore
-    //   .collection('cart')
-    //   .where()
+    // adding shoe to firestore database for singed in user
+    projectFirestore.collection("cart_" + user.uid).add({
+      size,
+      ...shoeData,
+      timestamp: serverTimestamp(),
+    });
   };
 
   const selectedSize = useRef();
