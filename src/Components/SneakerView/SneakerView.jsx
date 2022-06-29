@@ -1,17 +1,27 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { sneakerSliceActions } from "../../store/sneakerSlice";
 import { Button, BottomSection, Select, Container } from "./styles";
 import { cartSliceActions } from "../../store/cartSlice";
+import { projectFirestore } from "../../config/firebaseConfig";
+import { serverTimestamp } from "@firebase/firestore";
+import { selectUser } from "../../store/userSlice";
 
 const SneakerView = ({ data }) => {
   const [size, setSize] = useState("");
 
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {
     dispatch(cartSliceActions.addItemToCart({ size, ...data }));
+
+    projectFirestore.collection("cart_" + user.uid).add({
+      size,
+      ...data,
+      timestamp: serverTimestamp(),
+    });
   };
 
   return (

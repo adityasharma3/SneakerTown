@@ -6,8 +6,6 @@ import { Container } from "./style";
 const Welcome = () => {
   const userDetail = useSelector(selectUser);
 
-  console.log(userDetail);
-
   return (
     <>
       <Container>

@@ -7,7 +7,7 @@ import { cartSliceActions } from "../../store/cartSlice";
 import { projectFirestore } from "../../config/firebaseConfig";
 import { selectUser } from "../../store/userSlice";
 
-const CartDisplay = (props) => {
+const CartDisplay = () => {
   const [cartItems, setCartItems] = useState([{}]);
 
   const dispatch = useDispatch();
@@ -21,10 +21,6 @@ const CartDisplay = (props) => {
         .onSnapshot((snap) => {
           let documents = [];
 
-          // documents.push({
-          //   ...doc.data(),
-          //   id: doc.id,
-          // });
           snap.forEach((doc) => {
             documents.push({
               ...doc.data(),
@@ -37,17 +33,15 @@ const CartDisplay = (props) => {
     };
 
     return () => sub();
-  }, [projectFirestore]);
+  }, []);
 
   const removeFromCartHandler = (id) => {
     dispatch(cartSliceActions.removeItemFromCart(id));
   };
 
-  // const cartItems = useSelector((state) => state.cart.items);
-
   console.log(cartItems);
 
-  if (cartItems === "") {
+  if (cartItems.length === 0) {
     return (
       <div
         className="no--cart--items"
@@ -67,44 +61,43 @@ const CartDisplay = (props) => {
         </p>
       </div>
     );
-  }
+  } else
+    return cartItems.map((item) => {
+      return (
+        <Fragment key={item.id}>
+          <ShoeDisplay key={item.id} style={{ position: "relative" }}>
+            <LeftSections>
+              <img src={item.grid_picture_url} alt={item.name} />
+            </LeftSections>
 
-  return cartItems.map((item) => {
-    return (
-      <Fragment key={item.id}>
-        <ShoeDisplay key={item.id} style={{ position: "relative" }}>
-          <LeftSections>
-            <img src={item.image} alt={item.name} />
-          </LeftSections>
-
-          <RightSections>
-            <h3>{item.name}</h3>
-            <Button
-              key={item.id}
-              onClick={() => removeFromCartHandler(item.id)}
-              style={{
-                position: "absolute",
-                right: "5%",
-                top: "5%",
-              }}
-            >
-              X
-            </Button>
-            <p>{item.size} UK</p>
-            <p>Quantity : {item.quantity}</p>
-            <h3>₹{item.price}</h3>
-          </RightSections>
-        </ShoeDisplay>
-        <hr
-          style={{
-            width: "80%",
-            outline: "none",
-            border: "1px solid grey",
-          }}
-        />
-      </Fragment>
-    );
-  });
+            <RightSections>
+              <h3>{item.name}</h3>
+              <Button
+                key={item.id}
+                onClick={() => removeFromCartHandler(item.id)}
+                style={{
+                  position: "absolute",
+                  right: "5%",
+                  top: "5%",
+                }}
+              >
+                X
+              </Button>
+              <p>{item.size} UK</p>
+              <p>Quantity : {item.quantity}</p>
+              <h3>₹{(item.retail_price_cents / 100) * 80}</h3>
+            </RightSections>
+          </ShoeDisplay>
+          <hr
+            style={{
+              width: "80%",
+              outline: "none",
+              border: "1px solid grey",
+            }}
+          />
+        </Fragment>
+      );
+    });
 };
 
 export default CartDisplay;
