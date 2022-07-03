@@ -37,6 +37,8 @@ const CartDisplay = () => {
 
   const removeFromCartHandler = (id) => {
     dispatch(cartSliceActions.removeItemFromCart(id));
+
+    console.log(projectFirestore.collection("cart_" + user.uid).doc());
   };
 
   console.log(cartItems);

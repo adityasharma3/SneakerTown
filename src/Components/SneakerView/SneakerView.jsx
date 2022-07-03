@@ -49,7 +49,7 @@ const SneakerView = ({ data }) => {
         <img src={data.grid_picture_url} alt={data.name} />
       </Link>
       <BottomSection>
-        <h3>₹{(data.retail_price_cents / 100) * 72}</h3>
+        <h3>₹{(data.retail_price_cents / 100) * 80}</h3>
         <Select value={size} onChange={(event) => setSize(event.target.value)}>
           <option>Select size</option>
           {data.size_range.map((item) => (
