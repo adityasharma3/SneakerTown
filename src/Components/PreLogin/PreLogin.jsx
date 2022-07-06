@@ -4,8 +4,11 @@ import LandingImage from "../assets/Landing/landing-sneaker.png";
 import { projectAuth } from "../../config/firebaseConfig";
 import { login } from "../../store/userSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const PreoLogin = () => {
+  const navigate = useNavigate();
+
   const [userDetails, setUserDetails] = useState({
     userName: "",
     email: "",
@@ -37,7 +40,8 @@ const PreoLogin = () => {
                 displayName: userDetails.userName,
               })
             );
-          });
+          })
+          .then(navigate(""));
       })
       .catch((error) => alert(error));
 

@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { logout, selectUser } from "../../store/userSlice";
 import { useDispatch } from "react-redux";
-import { projectAuth } from "../../config/firebaseConfig";
+import { projectAuth, projectFirestore } from "../../config/firebaseConfig";
+import { useEffect } from "react";
 
 const NavBar = (props) => {
-  const cartItems = useSelector((state) => state.cart.items);
+  // const cartItems = useSelector((state) => state.cart.items);
   const user = useSelector(selectUser);
+  const cartItems = useSelector((state) => state.cart.items.length);
 
   const dispatch = useDispatch();
 
@@ -38,7 +40,7 @@ const NavBar = (props) => {
           <RightHalf>
             <Button>
               <Link to="/cart">Cart</Link>
-              {cartItems.length !== 0 && (
+              {cartItems !== 0 && (
                 <p
                   style={{
                     margin: "0",
@@ -51,7 +53,7 @@ const NavBar = (props) => {
                     width: "min-content",
                   }}
                 >
-                  {cartItems.length}
+                  {cartItems}
                 </p>
               )}
             </Button>

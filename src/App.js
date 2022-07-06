@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import NavBar from './Components/NavBar/NavBar';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import { Cart } from './pages/Cart';
 import View from './pages/View';
@@ -27,6 +27,8 @@ function App() {
               <Route path='/view/:id' element={<View />} />
             </Routes>
           )}
+
+        {/* {!user ? <Navigate to='/' /> : null} */}
       </Fragment>
     </Router>
   );

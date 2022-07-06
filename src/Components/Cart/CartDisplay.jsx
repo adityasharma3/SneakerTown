@@ -14,7 +14,7 @@ const CartDisplay = () => {
   const user = useSelector(selectUser);
 
   useEffect(() => {
-    const sub = () => {
+    function sub() {
       projectFirestore
         .collection("cart_" + user.uid)
         .orderBy("timestamp", "desc")
@@ -30,18 +30,19 @@ const CartDisplay = () => {
 
           setCartItems(documents);
         });
-    };
+    }
 
-    return () => sub();
-  }, []);
+    sub();
+  }, [projectFirestore.collection("user_" + user.uid)]);
 
   const removeFromCartHandler = (id) => {
-    dispatch(cartSliceActions.removeItemFromCart(id));
+    projectFirestore
+      .collection("cart_" + user.uid)
+      .doc(id)
+      .delete();
 
-    console.log(projectFirestore.collection("cart_" + user.uid).doc());
+    alert("Removing item from cart 👟");
   };
-
-  console.log(cartItems);
 
   if (cartItems.length === 0) {
     return (
