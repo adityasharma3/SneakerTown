@@ -2,7 +2,6 @@
   "name": "sneaker-town",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adityasharma3.github.io/SneakerTown",
   "dependencies": {
     "@mui/material": "^5.4.0",
     "@reduxjs/toolkit": "^1.7.1",

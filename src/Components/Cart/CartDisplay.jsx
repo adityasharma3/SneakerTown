@@ -1,16 +1,14 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Button } from "../NavBar/NavBarStyles";
 import { LeftSections, RightSections, ShoeDisplay } from "./CartStyles";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { cartSliceActions } from "../../store/cartSlice";
 import { projectFirestore } from "../../config/firebaseConfig";
 import { selectUser } from "../../store/userSlice";
 
 const CartDisplay = () => {
   const [cartItems, setCartItems] = useState([{}]);
 
-  const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
   useEffect(() => {
