@@ -85,7 +85,6 @@ const CartDisplay = () => {
                 X
               </Button>
               <p>{item.size} UK</p>
-              <p>Quantity : {item.quantity}</p>
               <h3>₹{(item.retail_price_cents / 100) * 80}</h3>
             </RightSections>
           </ShoeDisplay>
