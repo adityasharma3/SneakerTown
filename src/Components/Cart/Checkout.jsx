@@ -6,20 +6,32 @@ import { selectUser } from "../../store/userSlice";
 
 const Checkout = () => {
   const [price, setPrice] = useState(0);
+  const [newPrice, setNewPrice] = useState(0);
   const user = useSelector(selectUser);
 
-  useEffect(() => {
-    projectFirestore.collection("cart_" + user.uid).onSnapshot((snap) => {
-      console.log(snap);
-      snap.forEach((doc) => {
-        // setMata(doc);
-        // setPrice((prev) => { prev + (doc.data().retail_price_cents/100))
-        setPrice((prev) => prev + (doc.data().retail_price_cents / 100) * 80);
+  useEffect(
+    () => {
+      let totalPrice = 0;
+      projectFirestore.collection("cart_" + user.uid).onSnapshot((snap) => {
+        snap.forEach((doc) => {
+          // setMata(doc);
+          // setPrice((prev) => { prev + (doc.data().retail_price_cents/100))
+          // setPrice((prev) => (prev + doc.data().retail_price_cents / 100) * 80);
+          setNewPrice((doc.data().retail_price_cents / 100) * 80);
+          // console.log(doc.data().retail_price_cents / 100);
+          setPrice((prev) => prev + newPrice);
+        });
       });
-    });
-    // console.log(mata);
-    if (!user) setPrice(0);
-  }, [projectFirestore.collection("cart_" + user.uid)]);
+
+      // console.log(totalPrice);
+      // console.log(mata);
+
+      console.log(price);
+
+      if (!user) setPrice(0);
+    }, // [projectFirestore.collection("cart_" + user.uid)]);
+    [projectFirestore]
+  );
 
   return (
     <Fragment>
